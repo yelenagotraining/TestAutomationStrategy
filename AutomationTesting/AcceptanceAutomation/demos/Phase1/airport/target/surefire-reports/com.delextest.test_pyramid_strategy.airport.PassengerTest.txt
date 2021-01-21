@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.delextest.test_pyramid_strategy.airport.PassengerTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.109 sec <<< FAILURE! - in com.delextest.test_pyramid_strategy.airport.PassengerTest
+testInvalidCountryCode()  Time elapsed: 0.043 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.lang.RuntimeException to be thrown, but nothing was thrown.
+	at com.delextest.test_pyramid_strategy.airport.PassengerTest.testInvalidCountryCode(PassengerTest.java:27)
+
+testSetInvalidCountryCode()  Time elapsed: 0 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.lang.RuntimeException to be thrown, but nothing was thrown.
+	at com.delextest.test_pyramid_strategy.airport.PassengerTest.testSetInvalidCountryCode(PassengerTest.java:34)
+

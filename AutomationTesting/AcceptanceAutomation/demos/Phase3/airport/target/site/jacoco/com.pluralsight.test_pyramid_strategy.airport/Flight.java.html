@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Flight.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">test_pyramid_strategy</a> &gt; <a href="index.source.html" class="el_package">com.pluralsight.test_pyramid_strategy.airport</a> &gt; <span class="el_source">Flight.java</span></div><h1>Flight.java</h1><pre class="source lang-java linenums">package com.pluralsight.test_pyramid_strategy.airport;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Flight {
+
+	private String flightNumber;
+    private int places;
+	private int passengers;
+	private String origin;
+    private String destination;
+    private boolean flying;
+
+<span class="fc" id="L15">    private String flightNumberRegex = &quot;^[A-Z]{2}\\d{3,4}$&quot;;</span>
+<span class="fc" id="L16">    private Pattern pattern = Pattern.compile(flightNumberRegex);</span>
+
+
+<span class="fc" id="L19">    public Flight(String flightNumber, int places) {</span>
+<span class="fc" id="L20">        Matcher matcher = pattern.matcher(flightNumber);</span>
+<span class="fc bfc" id="L21" title="All 2 branches covered.">        if(!matcher.matches()) {</span>
+<span class="fc" id="L22">            throw new RuntimeException(&quot;Invalid flight number&quot;);</span>
+        }
+<span class="fc" id="L24">		this.flightNumber = flightNumber;</span>
+<span class="fc" id="L25">		this.places = places;</span>
+<span class="fc" id="L26">		this.passengers = 0;</span>
+<span class="fc" id="L27">		this.flying = false;</span>
+<span class="fc" id="L28">	}</span>
+
+	public String getFlightNumber() {
+<span class="fc" id="L31">		return flightNumber;</span>
+	}
+
+    public int getPlaces() {
+<span class="fc" id="L35">        return places;</span>
+    }
+
+    public void setPlaces(int places) {
+<span class="fc bfc" id="L39" title="All 2 branches covered.">        if(passengers &gt; places) {</span>
+<span class="fc" id="L40">            throw new RuntimeException(&quot;Cannot reduce the number of places under the number of existing passengers!&quot;);</span>
+        }
+
+<span class="fc" id="L43">        this.places = places;</span>
+<span class="fc" id="L44">    }</span>
+
+    public int getPassengers() {
+<span class="fc" id="L47">        return passengers;</span>
+    }
+
+    public String getOrigin() {
+<span class="fc" id="L51">        return origin;</span>
+    }
+
+    public void setOrigin(String origin) {
+<span class="fc" id="L55">        this.origin = origin;</span>
+<span class="fc" id="L56">    }</span>
+
+    public String getDestination() {
+<span class="fc" id="L59">        return destination;</span>
+    }
+
+    public void setDestination(String destination) {
+<span class="fc" id="L63">        this.destination = destination;</span>
+<span class="fc" id="L64">    }</span>
+
+    public boolean isFlying() {
+<span class="nc" id="L67">        return flying;</span>
+    }
+
+    @Override
+    public String toString() {
+<span class="fc" id="L72">        return &quot;Flight &quot; + getFlightNumber() + &quot; from &quot; + getOrigin() + &quot; to &quot; + getDestination();</span>
+    }
+
+    public void sellTicket() {
+<span class="fc bfc" id="L76" title="All 2 branches covered.">        if(passengers &gt;= places) {</span>
+<span class="fc" id="L77">            throw new RuntimeException(&quot;Not enough places!&quot;);</span>
+        }
+<span class="fc" id="L79">        System.out.println(&quot;Ticket for &quot; + this + &quot; sold&quot;);</span>
+<span class="fc" id="L80">        passengers++;</span>
+<span class="fc" id="L81">    }</span>
+
+    public void takeOff() {
+<span class="nc" id="L84">	    System.out.println(this + &quot; is taking off&quot;);</span>
+<span class="nc" id="L85">	    flying = true;</span>
+<span class="nc" id="L86">    }</span>
+
+    public void land() {
+<span class="nc" id="L89">        System.out.println(this + &quot; is landing&quot;);</span>
+<span class="nc" id="L90">        flying = false;</span>
+<span class="nc" id="L91">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

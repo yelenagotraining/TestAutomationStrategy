@@ -1,0 +1,4 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+test_pyramid_strategy,com.pluralsight.test_pyramid_strategy.airport,Passenger,0,118,0,8,0,29,0,13,0,9
+test_pyramid_strategy,com.pluralsight.test_pyramid_strategy.airport,Flight,31,121,0,6,7,30,3,14,3,11
+test_pyramid_strategy,com.pluralsight.test_pyramid_strategy.airport,Main,31,0,0,0,10,0,2,0,2,0

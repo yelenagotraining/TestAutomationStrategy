@@ -1,0 +1,4 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+test_pyramid_strategy,com.tntautomation.test_pyramid_strategy.airport,Flight,112,0,0,0,28,0,14,0,14,0
+test_pyramid_strategy,com.tntautomation.test_pyramid_strategy.airport,Main,37,0,0,0,12,0,2,0,2,0
+test_pyramid_strategy,com.tntautomation.test_pyramid_strategy.airport,Passenger,5,113,1,7,1,28,1,12,0,9
