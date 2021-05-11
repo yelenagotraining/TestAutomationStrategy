@@ -1,29 +1,37 @@
+
 ### Baseline Testing Principles 
+
 1. Testing Shows Presence of Defects and Not Their Absence
   * Just because we have found no evidence of aliens, does not mean they don't exist
   * We will never be abile to prove there are not bugs AT ALL
+
 2. Exhaustive Testing is impossible
   * Risk Analysis 
   * Equivalence Partitioning
   * Voundary Value Analysis
+
 3. Early Testing Saves Time and Money
   * Get involved during requirements refinement proccess
-  * Do static testing - testing requirements before the become code
+  * Do static testing - testing requirements before they become code
   * If a mistake is made during requirements process, it gets coded into the code
   * Be Proactive!
+
 4. Defects Cluster Together
   * Prioratize your work:
    1. New Feature
    2. Area of the software that historically produces the most defects
    3. Test the rest in yhour spare time
+
 5. Beware of Pesticide Paradigm
   Running Same tests over and over again may become ineffective after a while. 
   - Review and change existing tests and test data
   - Create new tests
+
 6. Test is context dependent
   * External Stakeholder Interests
   * Domain
   * Laws and Standards
+
 7. Absence-of-Errors is a fallacy
   * Even if there are no bugs, it does not mean there are not errors
   * If what we built functions, but it's not what user wanted, there are errors
@@ -37,6 +45,7 @@
     * Test Techniques?
     * Schedule and deadlines?
   - Test plan is not set in stone
+
 * Test monitoring and control
   - On-going comparison of Palnned vs. Actual
     * Are we doing what we planned to do>
@@ -57,6 +66,7 @@
     * Inaccuracies
     * Contradictions
     * Superfluous statements
+
 * Test Design - How to test
   - Designing and prioritizing tests
   - Identifying necessary test data
@@ -65,13 +75,14 @@
 * Test Implementation
 * Test Execution
 * Test Completion
+
 **The dynamic of your workflow will be affected by SDLC style your team is implementing**
 
 ## What is Test Strategy?
 
 Test strategy is usually represented as a so-called pyarmid. There are many versions of testing pyramids that can be translated into strategies.
 If you do a google search, you'll find hundreds of representations, but generally, it looks something like this:
-![](https://github.com/AAInternal/TestAutomationStrategy/blob/master/img/TestPyramid.png)
+![](https://github.com/yelenagou/AutomationStrategyImages/blob/main/img/TestPyramid.png)
 
 Your pyramid, meaning how much of each type of testing you are going to do, depends on your product, where you in the life-cycle of the product, and who your stake holders are.
 
@@ -80,17 +91,17 @@ In order to string together a testing strategy, we must understand each testing 
 #### Therefore, the definition may be
 > A strategic declaration of how an organization iwll use the various testing concepts to minimize risk. 
 
-## Introducting Testing Concepts
+<!-- ## Introducting Testing Concepts
 [Introducing Testing Concepts](https://github.com/AAInternal/TestAutomationStrategy/wiki/Testing-Concepts)
 
 ### [Pyarmid == Strategy](https://github.com/AAInternal/TestAutomationStrategy/wiki/Pyramid-equals-Strategy)
 ![](https://github.com/AAInternal/TestAutomationStrategy/blob/master/img/buildingpyramid/OverallStrategy.png)
-[Build your pyramid](https://github.com/AAInternal/TestAutomationStrategy/wiki/Pyramid-equals-Strategy)
+[Build your pyramid](https://github.com/AAInternal/TestAutomationStrategy/wiki/Pyramid-equals-Strategy) -->
 
 Considering all the mentioned test types. How would you build your pyramid?
 Is there a perscriptive answer here?
 
-[Absolutely not! ](https://github.com/AAInternal/TestAutomationStrategy/wiki/Pyramid-equals-Strategy)
+<!-- [Absolutely not! ](https://github.com/AAInternal/TestAutomationStrategy/wiki/Pyramid-equals-Strategy)
 
 
 
@@ -99,7 +110,7 @@ To skip the intro go to
 
 [Go to programmers' oath](https://github.com/AAInternal/TestAutomationStrategy/wiki#the-programmers-oath---the-future-of-software)
 
-[Go to Wiki](https://github.com/AAInternal/TestAutomationStrategy/wiki/Home/_edit#the-programmers-oath---the-future-of-software)
+[Go to Wiki](https://github.com/AAInternal/TestAutomationStrategy/wiki/Home/_edit#the-programmers-oath---the-future-of-software) -->
 
 ## Intro to unit testing
 [Why and When?](https://github.com/AAInternal/TestAutomationStrategy/wiki/Unit-Testing-Introduction)
@@ -107,7 +118,7 @@ To skip the intro go to
 
 ### Unit Testing in Mainstream:
 Russian Doll on Netflix
-![Bug in the universe](https://github.com/AAInternal/TestAutomationStrategy/blob/master/img/RussianDoll.png)
+![Bug in the universe](https://github.com/yelenagou/AutomationStrategyImages/blob/main/img/RussianDoll.png)
 > On this show, there is a bug in the universe, and main character has to re-live the same day until the bug was fixed.
 
 ### We write unit tests to:
@@ -131,7 +142,7 @@ Russian Doll on Netflix
 - When you fixing a bug. So you never have to fix it again. 
 
 Does this mean the user will not find a bug during testing?
-![](https://github.com/AAInternal/TestAutomationStrategy/blob/master/img/BugWasFixed.png) 
+![](https://github.com/yelenagou/AutomationStrategyImages/blob/main/img/BugWasFixed.png) 
 **Yes, they will!**
 And we will fix it once and for all.
 
